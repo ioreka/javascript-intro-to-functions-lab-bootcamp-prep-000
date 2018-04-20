@@ -15,7 +15,11 @@ function logWhisper(string) {
 }
 
 function sayHiToGrandma(string) {
-  if (string)
+  if (string === string.toLowerCase()) {
+    console.log("I can't hear you!")
+} else  {
+    console.log("Expected the name to be Susan")
+}
   return string
 }
 
@@ -34,4 +38,8 @@ describe('sayHiToGrandma(string)', function() {
     expect(sayHiToGrandma("I love you, Grandma.")).toEqual("I love you, too.")
   })
 })
+
+
+
+
 
